@@ -1,0 +1,45 @@
+mixin header(data)
+  header.header&attributes(attributes)
+    .header__container.container.container_full.flex.flex_start.flex_top
+      a.header__logo.logo(href="#") Logotype
+
+      nav.header__nav.nav.flex.flex_start.flex_vertical
+        
+        button.nav__button
+          span.nav__button-text Меню
+          span.nav__icon
+            span.nav__line
+            span.nav__line
+            span.nav__line
+                        
+
+        ul.nav__list.flex.flex_start.flex_wrap
+          li.nav__item
+            a.nav__link(href="#about-country") Открытие бизнеса
+            ul.nav__item_sub.subnav
+              li.subnav__item
+                a.subnav__link(href="#") Регистрация ООО
+              li.subnav__item
+                a.subnav__link(href="#") Регистрация ИП
+          li.nav__item
+            a.nav__link(href="#to-do") Обслуживание
+          li.nav__item
+            a.nav__link(href="#visa") Бух.учёт
+          li.nav__item
+            a.nav__link(href="#events") Наша практика
+          li.nav__item
+            a.nav__link(href="#gallery") Выбрать банк
+
+
+      .header__contacts
+        a.header__phone.phone(href="tel:+78000000000") 8 800 000 00-00
+  
+        ul.header__social.social
+          li.social__item.social__item_fb
+            a.social__link(href="#") Facebook
+          li.social__item.social__item_twitter
+            a.social__link(href="#") Twitter
+          li.social__item.social__item_vk
+            a.social__link(href="#") Vk
+          li.social__item.social__item_inst
+            a.social__link(href="#") Instagram

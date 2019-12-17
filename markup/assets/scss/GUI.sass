@@ -1,0 +1,95 @@
+.title
+  font-family: $m 
+  font-style: normal
+  text-align: left
+  &_biggest
+    font-size: 70px
+    font-weight: 900
+    line-height: 1
+
+  span
+    color: $skyblue 
+  
+
+.button
+  @include resetbutton()
+  padding-top: 28px
+  padding-right: 50px
+  padding-bottom: 27px
+  padding-left: 50px
+  
+  height: 81px
+  background-image: linear-gradient(to top, #3eb24f, #49cb5c)
+
+  color: $white
+  font-family: $f
+  font-size: 28px
+  font-weight: bold
+  line-height: 1
+  text-align: center
+  white-space: nowrap
+  border-radius: 8px
+
+  @include tr(all .3s ease-out)
+  
+
+.flex
+  display: flex
+  
+.flex_start
+  justify-content: flex-start
+
+.flex_center
+  justify-content: center
+  
+.flex_end
+  justify-content: flex-end
+  
+.flex_top
+  align-items: flex-start
+  
+
+  
+
+.flex_vertical
+  align-items: center
+
+
+.flex_wrap
+  flex-wrap: wrap
+
+
+.grid
+  overflow: hidden
+  &__list
+    margin-right: -5px
+    margin-left: -5px
+
+
+.slider
+
+  .slick-arrow
+    top: auto
+    bottom: 0
+    z-index: 1
+    width: 100px
+    height: auto
+    transform: none
+    &:before
+      background: transparent     
+      font-size: 55px
+      font-weight: 400
+      font-style: italic
+      line-height: 1.454
+      +tr(all .3s ease)
+
+      
+  .slick-prev
+    left: 0
+    &:before
+      content: "←" 
+      
+  .slick-next
+    right: 0
+    &:before
+      content: "→" 
