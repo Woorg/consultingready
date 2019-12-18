@@ -1,17 +1,28 @@
 .faq
   &__container
-    padding-top: 85px
-    padding-bottom: 65px
+    padding-top: (85px / 2)
+    padding-bottom: (65px / 2)
+    +mq($medium)
+      padding-top: 85px
+      padding-bottom: 65px
   
   &__title
-    margin-bottom: 90px
+    margin-bottom: (90px / 2)
+
     line-height: 1.2
     
+    +mq($small)
+      margin-bottom: 90px
+
   &__content
     margin-left: auto
-    max-width: 851px
+    // max-width: 851px
+    max-width: 100%
     width: 100%
     
+    +mq($medium)
+      max-width: 62%
+
   &__list
     counter-reset: listCounter
 
@@ -65,19 +76,23 @@
   &__item-title
     position: relative
     font-family: $fD
-    font-size: 28px
+    font-size: 20px
     font-weight: normal
     line-height: 1
-    white-space: nowrap
-    text-overflow: ellipsis
     color: #2d2d2d
     overflow: hidden
+    
+    +mq($small)
+      font-size: 28px
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
     
     &:after
       position: absolute
       top: 50%
       right: 0
-      
+      content: "" 
       +bg($faq-arrow)
       transform: translateY(-50%)
 
@@ -89,14 +104,24 @@
     
   &__image
     margin-top: 12px
+    display: none
+    +mq($large)
+      display: block
   
   &__button
     position: relative
     z-index: 1
-    margin-top: 20px
-    padding-top: 25px
-    padding-right: 26px
-    padding-bottom: 27px
+    margin-top: 10px
+    padding-top: 15px
+    padding-right: 16px
+    padding-bottom: 17px
     padding-left: 26px
-    height: 81px
-    font-size: 28px
+    height: auto
+    font-size: 21px
+    +mq($small)
+      padding-top: 25px
+      padding-right: 26px
+      padding-bottom: 27px
+      padding-left: 26px
+      height: 81px
+      font-size: 28px

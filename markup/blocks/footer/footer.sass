@@ -10,10 +10,26 @@
     line-height: 1
 
   &__col
+    margin-top: 50px
+    margin-bottom: 50px
     margin-right: auto
-    padding-right: 95px
+    padding-right: 0
+    max-width: 100%
     flex-grow: 1
+    -webkit-order: -1
+    -ms-order: -1
+    order: 3
+    +mq($small)
+      margin-top: 0
+      padding-right: 30px
+      max-width: 40%
+      order: 0
     
+    +mq($large)
+      margin-bottom: 0
+      padding-right: 95px
+      max-width: 50%
+      
   &__phone
     margin-bottom: 27px
     display: inline-block
@@ -22,18 +38,30 @@
     text-decoration: none 
     
   &__nav-w
-    max-width: 660px
+    max-width: 100%
     width: 100%
     
+    +mq($large)
+      max-width: 660px
+
   &__nav
     margin-bottom: 28px
     margin-right: auto
     flex-shrink: 1
     flex-grow: 1
+    
+
+
     &:last-child
       margin-left: auto
       margin-right: 0
-      padding-left: 180px
+      padding-left: 0
+      +mq($small)
+        padding-left: 30px
+
+      +mq($large)
+        padding-left: 180px
+
 
   // &__copyright
 

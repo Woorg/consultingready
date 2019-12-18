@@ -3,15 +3,26 @@
   font-style: normal
   text-align: left
   &_biggest
-    font-size: 70px
+    font-size: 36px
     font-weight: 900
     line-height: 1
 
+    +mq($small)
+      font-size: 50px
+    +mq($medium)
+      font-size: 70px
+
   &_regular
     font-family: $u
-    font-size: 70px
+    font-size: 36px
     font-weight: 500
     line-height: 1
+
+    +mq($small)
+      font-size: 50px
+    +mq($medium)
+      font-size: 70px
+      
 
   span
     color: $skyblue 
@@ -20,22 +31,26 @@
     
 .text
   font-family: $f
-  font-size: 24px
+  font-size: 18px
   font-weight: 500
-  line-height: 1.5
+  line-height: 1.2
   letter-spacing: 0.6px
   color: #2d2d2d
+  
+  +mq($small)
+    font-size: 24px
+    line-height: 1.5
 
 .button
   @include resetbutton()
-  padding-top: 25px
-  padding-right: 50px
-  padding-bottom: 24px
-  padding-left: 50px
+  padding-top: 12px
+  padding-right: 25px
+  padding-bottom: 14px
+  padding-left: 25px
   display: inline-block
   vertical-align: top
 
-  height: 81px
+  height: auto
   background-image: linear-gradient(to right, $green, #49cb5c)
 
   color: $white
@@ -48,23 +63,40 @@
   white-space: nowrap
   border-radius: 8px
   +tr(all .3s ease-out)
+  
+  +mq($small)
+    padding-top: 25px
+    padding-right: 50px
+    padding-bottom: 24px
+    padding-left: 50px
+    height: 81px
+
+
   &:hover
     background-image: linear-gradient(to right, $green, $green)
     +tr(all .3s ease-out)
 
   &_regular
     border: 2px solid 
-    padding-top: 7px
-    padding-right: 30px
+    padding-top: 10px
+    padding-right: 15px
     padding-bottom: 7px
-    padding-left: 30px
-    height: 46px
+    padding-left: 15px
+    height: auto
     background-image: linear-gradient(to right, $green, #49cb5c)
     font-size: 24px
     line-height: 1
     border-radius: 8px
     box-shadow: 1px 1.7px 7.7px 1.3px rgba(62, 66, 209, 0.3)
     +tr(all .3s ease-out)
+    
+    +mq($small)
+      padding-top: 7px
+      padding-right: 30px
+      padding-bottom: 7px
+      padding-left: 30px
+      height: 46px
+
     &:hover
       background-image: linear-gradient(to right, $green, $green)
       +tr(all .3s ease-out)

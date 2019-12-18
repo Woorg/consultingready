@@ -4,8 +4,10 @@
     padding-bottom: 30px
   &__title
     margin-bottom: 60px
-    padding-left: 50px
     text-align: center
+    +mq($small)
+      padding-left: 50px
+
 
   &__carousel
     margin-right: -20px
@@ -47,10 +49,14 @@
   &__image
     display: inline-block
     vertical-align: middle
+    max-width: 100%
     width: 100%
-    height: 76px
+    height: auto
     font-size: 0
     text-align: center
+    +mq($large)
+      height: 76px
+
     img
       display: inline 
       filter: grayscale(80)
@@ -59,16 +65,22 @@
     
   &__button
     margin-top: auto
-    margin-right: 25px
-    margin-left: 25px
     padding-top: 4px
     padding-right: 28px
     padding-bottom: 3px
     padding-left: 28px
+    max-width: 100%
+    width: 100%    
     height: 30px
     font-size: 20px
     display: none
     
+
+    +mq($large)
+      margin-right: 25px
+      margin-left: 25px
+      max-width: 212px
+
 
   .slick-arrow
     position: relative

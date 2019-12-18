@@ -18,7 +18,6 @@ html(class="no-js", lang="ru")
   include ../blocks/map/map.pug
   include ../blocks/contacts/contacts.pug
 
-
   //- include ../blocks/about-country/about-country.pug
   //- include ../blocks/to-do/to-do.pug
   //- include ../blocks/visa/visa.pug
@@ -75,7 +74,6 @@ html(class="no-js", lang="ru")
         +trust()
         +faq()
         +expert()
-        +article()
         +map()
         +contacts()
   
@@ -107,8 +105,10 @@ html(class="no-js", lang="ru")
           center: [55.780057, 37.663157], // Москва
           zoom: 16
         }, {
-          searchControlProvider: ''
+          searchControlProvider: '',
+
         });
+        myMap.behaviors.disable('scrollZoom');
 
         var myPlacemark = new ymaps.Placemark(
           [55.779987, 37.666001], {

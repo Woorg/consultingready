@@ -1,27 +1,45 @@
 .header
+  position: relative
+  z-index: 2
   box-shadow: 0 0 0 2px #e5e5e5
+  // overflow: hidden
   &__container
-  padding-top: 16px
-  padding-bottom: 15px
+    padding-top: 16px
+    padding-bottom: 15px
 
   &__logo
-    margin-top: -10px
-    margin-right: auto
+    margin-right: 30px
     max-width: 148px
     width: 100%
+    
+    +rmin(1272px)
+      margin-top: -10px
+      margin-right: auto
   &__nav
-    margin-top: -10px
     // margin-right: auto
-    // max-width: 870px
-    max-width: 938px
+    max-width: 100px
     width: 100%
+    +r($small)
+      margin-left: auto
+      
+    +rmin(1272px)
+      margin-top: -10px
+      margin-right: auto
+      max-width: 938px
+
 
   &__contacts
-    margin-right: -20px
-    // margin-left: auto
-    max-width: 163px
+    margin-left: 0
+    max-width: 100%
     width: 100%
+    +r($small)
+      margin-top: 10px
 
+    +mq($small)
+      // margin-right: -20px
+      margin-left: auto
+      max-width: 163px
+  
   &__phone
     margin-bottom: 6px
     display: block

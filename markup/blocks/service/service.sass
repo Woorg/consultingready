@@ -3,7 +3,6 @@
   background-color: #0197d2
   border-radius: 15px
   box-shadow: 6.5px 11.3px 61.1px 3.9px rgba(1, 151, 210, 0.35)
-  overflow: hidden
   
   &:nth-child(2)
     .service__icon
@@ -17,11 +16,17 @@
   &__top
     position: relative
     border-bottom: 10px solid $white
-    padding-top: 57px
-    padding-right: 45px
+    padding-top: 67px
+    padding-right: 20px
     padding-bottom: 10px
-    padding-left: 45px
-    min-height: 175px
+    padding-left: 20px
+    min-height: 135px
+    +mq($large)
+      padding-top: 57px
+      padding-right: 45px
+      padding-left: 45px
+      min-height: 175px
+
 
   &__icon
     position: absolute
@@ -43,19 +48,27 @@
 
   &__title
     font-family: $m
-    font-size: 30px
+    font-size: 25px
     font-weight: 900
-    line-height: 1.6
+    line-height: 1.4
     color: $white
+    +mq($large)
+      font-size: 30px
+      line-height: 1.6
     
   &__body
-    padding-right: 45px
+    padding-right: 20px
     padding-bottom: 10px
-    padding-left: 45px
+    padding-left: 20px
     height: 100%
 
     display: flex
     flex-direction: column
+    
+    +mq($large)
+      padding-right: 45px
+      padding-left: 45px
+
 
   &__list
     padding-top: 20px
@@ -83,7 +96,10 @@
       
   &__button
     margin-top: auto
-    max-width: 251px
     height: 49px
+    
+    +mq($large)
+      max-width: 251px
+
 
 

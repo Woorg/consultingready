@@ -1,33 +1,52 @@
 .services
   &__container
-    padding-top: 94px
+    padding-top: (94px / 2)
     padding-bottom: 40px
+    
+    +mq($small)
+      padding-top: 94px
+
   &__title
     margin-bottom: 18px
   &__text
     margin-bottom: 68px
     max-width: 1164px
     width: 100%
+    font-size: 18px
     font-family: $f
-    font-size: 24px
     font-weight: 500
-    line-height: 1.5
+    line-height: 1.2
     letter-spacing: 0.6px
     color: #2d2d2d
+    
+    +mq($small)
+      font-size: 24px
+      line-height: 1.5
+
   // &__list
 
   &__item
     margin-right: auto
-    max-width: 424px
-    // max-width: 31%
+    margin-bottom: 50px
+    // max-width: 424px
+    max-width: 100%
     width: 100%
-    height: 550px
+    height: auto
     flex-shrink: 1
     flex-grow: 1
     
     display: flex
     flex-direction: column
+    
+    +mq($small)
+      max-width: 48%
+    
+    +mq($large)
+      max-width: 31%
+      height: 550px
+
   
     &:last-child
+      margin-bottom: 0
       margin-right: 0
     

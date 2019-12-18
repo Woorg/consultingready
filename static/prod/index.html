@@ -15,7 +15,7 @@
         <link href="assets/css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css">
         <link href="assets/css/separate-css/slick.css" rel="stylesheet" type="text/css">
         <link href="assets/css/separate-css/slick-theme.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/mainnc9p1d.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/mainlg19hq.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script>
@@ -180,7 +180,7 @@
                 </section>
                 <section class="cta">
                     <div class="cta__container container">
-                        <div class="cta__w" style="background-image:url('assets/images/general/cta-bg.png');">
+                        <div class="cta__w">
                             <h2 class="cta__title">Не можете <span>определиться</span>?</h2>
                             <div class="cta__text">Оставьте заявку и вам сразу перезвонит наш консультант.</div>
                             <button class="cta__button button button_additional">Консультация</button>
@@ -456,14 +456,13 @@
                         </div>
                     </div>
                 </section>
-                <div class="article"></div>
                 <section class="map">
                     <div class="map__container container">
                         <div class="map__contacts contacts">
                             <div class="contacts__top">
                                 <h2 class="contacts__title title title_biggest">Напишите мы на связи</h2>
                             </div>
-                            <div class="contacts__body flex flex_start flex_top flex-wrap">
+                            <div class="contacts__body flex flex_start flex_top flex_wrap">
                                 <form class="contacts__form form" action="" method="post">
                                     <div class="form__field">
                                         <input class="form__input" type="text" value="" placeholder="Ваше имя">
@@ -571,7 +570,7 @@
         <script src="assets/js/separate-js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/separate-js/slick.min.js"></script>
         <script src="assets/js/separate-js/jquery.mask.min.js"></script>
-        <script src="assets/js/mainnc9p1d.min.js"></script>
+        <script src="assets/js/mainlg19hq.min.js"></script>
         <script src="//api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&amp;lang=ru_RU"></script>
         <script>
             ymaps.ready(init);
@@ -581,8 +580,10 @@
                   center: [55.780057, 37.663157], // Москва
                   zoom: 16
                 }, {
-                  searchControlProvider: ''
+                  searchControlProvider: '',
+              
                 });
+                myMap.behaviors.disable('scrollZoom');
               
                 var myPlacemark = new ymaps.Placemark(
                   [55.779987, 37.666001], {

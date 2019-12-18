@@ -1,9 +1,11 @@
 .advantages
   padding-right: 50px
   padding-left: 50px
-  display: flex
+  display: none
   justify-content: center
   align-items: center
+  +mq($large)
+    display: flex
   &__item
     margin-right: auto
     text-align: center

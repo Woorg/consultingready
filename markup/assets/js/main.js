@@ -72,20 +72,20 @@ import svg4everybody from 'svg4everybody';
 
     // Nav
 
-    // const $navButton = $('.nav__button');
+    const $navButton = $('.nav__button');
 
-    // $navButton.on('click', function (e) {
-    //   e.preventDefault();
+    $navButton.on('click', function (e) {
+      e.preventDefault();
 
-    //   $(this).parent().toggleClass('nav_open');
-    // });
+      $(this).parent().toggleClass('nav_open');
+    });
 
 
-    // $(document).on('click', function(e) {
-    //   if (!$(e.target).closest('.header__nav.nav_open').length) {
-    //     $('.header__nav.nav').removeClass('nav_open');
-    //   }
-    // });
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('.header__nav.nav_open').length) {
+        $('.header__nav.nav').removeClass('nav_open');
+      }
+    });
 
 
     // Nav to section
@@ -101,14 +101,12 @@ import svg4everybody from 'svg4everybody';
 
     // Typograf
 
-    const tp = new Typograf({locale: ['ru', 'en-US']});
-    const serviceText = document.querySelector('.services__text');
-    const heroText = document.querySelector('.hero__text');
+    // const tp = new Typograf({locale: ['ru', 'en-US']});
+    // const serviceText = document.querySelector('.services__text');
+    // const heroText = document.querySelector('.hero__text');
 
-    serviceText.innerHTML = tp.execute(serviceText.innerHTML);
-    heroText.innerHTML = tp.execute(heroText.innerHTML);
-
-
+    // serviceText.innerHTML = tp.execute(serviceText.innerHTML);
+    // heroText.innerHTML = tp.execute(heroText.innerHTML);
 
 
     // Hero slider
@@ -162,7 +160,8 @@ import svg4everybody from 'svg4everybody';
     if ($trustCarousel.length) {
 
       $trustCarousel.slick({
-        slidesToShow: 4,
+        mobileFirst: true,
+        slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
         arrows: true,
@@ -177,6 +176,19 @@ import svg4everybody from 'svg4everybody';
         appendArrows: '.trust__carousel-nav',
         // prevArrow: '.hero__arrow_prev',
         // nextArrow: '.hero__arrow_next',
+        responsive: [
+            {
+              breakpoint: 751,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 1100,
+              settings: {
+                slidesToShow: 4,
+              }
+        }]
       });
 
     }

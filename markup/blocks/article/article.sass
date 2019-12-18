@@ -5,14 +5,20 @@
   border-radius: 5px
   box-shadow: 1px 1.7px 35.7px 2.3px rgba(0, 0, 0, 0.05)
   &__image
+
     opacity: 1
     +tr(all .3s ease-out)
+      
+
     &:hover
       opacity: 0.9
       +tr(all .3s ease-out)
       
-    // img
-
+    img
+      width: 100%
+      +mq($medium)
+        width: auto
+        
   &__content
     padding-top: 7px
     padding-right: 16px

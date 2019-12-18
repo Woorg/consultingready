@@ -1,29 +1,57 @@
 .cta
   &__container
-    padding-top: 40px
-    padding-bottom: 96px
-    font-size: 30px
-    font-family: $u 
+    padding-top: (40px / 2)
+    padding-bottom: (96px / 2)
+    font-size: 21px
+    font-family: $u
+    +mq($medium)
+      padding-top: 40px
+      padding-bottom: 96px
+      font-size: 25px
+
+    +mq($large)
+      font-size: 30px
     
   &__w
     position: relative
     padding-top: 20px
-    padding-right: 320px
-    padding-bottom: 25px
-    padding-left: 190px
-    min-height: 115px
+    padding-right: 40px
+    padding-bottom: 20px
+    padding-left: 40px
+    height: auto
+    text-align: center
     background-color: #f3efef
-    // background-size: cover
+    background-image: none 
     background-repeat: no-repeat 
-    background-position: 0 0 
+    background-position: 0 0
     border-radius: 3px
+    
+    +mq($medium)
+      padding-right: 320px
+      padding-left: 190px
+      height: 115px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      background-image: url('../images/general/cta-bg.png')
+      background-size: cover
+      text-align: left
+      
+    +mq($large)
+      padding-top: 20px
+      padding-bottom: 25px
+
     &:after
       position: absolute
       top: calc(50% - 1px)
       left: 12px
       content: ""
+      display: none
       +bg($cta-icon)
       transform: translateY(-50%) 
+      
+      +mq($medium)
+        display: block
       
   &__title
     margin-bottom: 4px
@@ -32,10 +60,13 @@
       color: #0197D3
 
   &__text
-    +tracking(0) 
-      
+    +tracking(0)
+
   &__button
-    position: absolute
-    top: calc(50% - 2px)
-    right: 46px
-    transform: translateY(-50%)
+    margin-top: 20px
+    +mq($medium)
+      position: absolute
+      top: calc(50% - 2px)
+      right: 46px
+      margin-top: 0
+      transform: translateY(-50%)

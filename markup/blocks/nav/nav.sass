@@ -9,7 +9,8 @@
     +resetbutton()
     display: block
     color: currentColor
-    +mq($large)
+    
+    +rmin(1272px)
       display: none
       
   &__button-text
@@ -27,15 +28,17 @@
     height: 2px
     display: block
     background: currentColor
+    opacity: 1
+    +tr(all .1s linear)
     &:last-child
       margin-bottom: 0  
 
   &__list 
-    display: block
+    display: none
     font-size: 18px
     font-weight: 500
     
-    +mq($large)
+    +rmin(1272px)
       display: flex
 
   &__item,
@@ -176,3 +179,50 @@
     &:hover
       color: transparentize($white, .1)
 
+
+.nav_open
+
+  // .nav__icon
+
+  .nav__line
+    &:nth-child(1)
+      transform: translateY(7px) rotate(45deg)
+      +tr(all .1s linear)
+    &:nth-child(2)
+      display: none
+      opacity: 0
+      +tr(all .1s linear)
+    &:nth-child(3)
+      transform: translateY(0) rotate(-45deg)
+      +tr(all .1s linear)
+
+  .nav__list
+    position: absolute
+    top: calc(100% + 2px)
+    left: 15px
+    right: 15px
+    padding-top: 10px
+    padding-bottom: 10px
+    display: block
+    background: $white 
+    
+  .nav__item
+    margin-right: 0
+    margin-bottom: 10px
+    &:hover
+      .nav__sub
+        position: static
+        margin-top: 10px
+        margin-bottom: 10px
+        box-shadow: none
+        
+  .nav__item_sub
+    position: static
+    
+    .nav__link
+      &:after
+        transform: rotate(180deg)
+        
+  .nav__sub
+    &:after
+      display: none

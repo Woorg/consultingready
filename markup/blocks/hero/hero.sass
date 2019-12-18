@@ -1,16 +1,25 @@
 .hero 
   &__container
-    padding-top: 124px
-    padding-bottom: 94px
+    padding-top: (124px / 2)
+    padding-bottom: (94px / 2)
+    
+    +mq($small)
+      padding-top: 124px
+      padding-bottom: 94px
+
   // &__slider
 
   &__item
     position: relative
-    padding-top: 39px
-    padding-right: 40px
-    padding-bottom: 28px
-    padding-left: 40px
+    padding-right: 20px
+    padding-left: 20px
     
+    +mq($small)
+      padding-top: 39px
+      padding-right: 40px
+      padding-bottom: 28px
+      padding-left: 40px
+
   &__entry
     position: relative
     z-index: 1
@@ -18,28 +27,41 @@
     width: 100%    
 
   &__title
-    margin-bottom: 63px
+    margin-bottom: (63px / 2)
     +tracking(0)
     line-height: 1.1
+    +mq($small)
+      margin-bottom: 63px
+
     
   &__text
-    margin-bottom: 64px
+    margin-bottom: (64px / 2)
     max-width: 490px
     width: 100%
+    font-size: 18px
     font-family: $f
-    font-size: 24px
     font-weight: 500
     line-height: normal
     letter-spacing: 1.2px
     text-align: left
     color: #000000
     
+    +mq($small)
+      margin-bottom: 64px
+      font-size: 24px
+
+    
   // &__button
   
   &__image
-    position: absolute
-    top: 0
-    right: 0
+
+    display: none
+    
+    +mq($medium)
+      position: absolute
+      top: 0
+      right: 0
+      display: block
 
 
   .slick-arrow
@@ -55,11 +77,14 @@
       +tr(opacity .3s ease-out)
         
   .slick-prev
-    left: 0
+    left: -10px
+    +mq($small)
+      left: 0
       
   .slick-next
-    right: 0
+    right: -10px
     transform: translateY(-50%) rotate(180deg)
-
+    +mq($small)
+      right: 0
 
 

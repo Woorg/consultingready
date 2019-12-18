@@ -1,19 +1,42 @@
 .expert
   &__container
     padding-top: 54px
-    padding-bottom: 116px
+    padding-bottom: (116px / 2)
+    +mq($medium)
+      padding-top: 54px
+      padding-bottom: 116px
   
   &__title
-    margin-bottom: 72px
+    margin-bottom: (72px / 2)
     text-align: center
+    
+    +mq($small)
+      margin-bottom: 72px
 
-  // &__articles
+
+  &__articles
+    flex-wrap: wrap
+    +mq($medium)
+      flex-wrap: nowrap
 
   &__article
-    margin-right: auto
-    max-width: 421px
+    margin-bottom: 30px
+    max-width: 100%
     width: 100%
     min-height: 270px
+    
+    +mq($medium)
+      margin-right: 30px
+      max-width: 50%
+
+    +mq($large)
+      margin-right: auto
+      // max-width: 421px
+      max-width: 30% 
+
+
     &:last-child
       margin-right: 0
       
+
+
