@@ -1,1 +1,89 @@
+.service
+  background-size: cover
+  background-color: #0197d2
+  border-radius: 15px
+  box-shadow: 6.5px 11.3px 61.1px 3.9px rgba(1, 151, 210, 0.35)
+  overflow: hidden
+  
+  &:nth-child(2)
+    .service__icon
+      &:after
+        +bg($service-icon-2)
+  &:nth-child(3)
+    .service__icon
+      &:after
+        +bg($service-icon-3)
+
+  &__top
+    position: relative
+    border-bottom: 10px solid $white
+    padding-top: 57px
+    padding-right: 45px
+    padding-bottom: 10px
+    padding-left: 45px
+    min-height: 175px
+
+  &__icon
+    position: absolute
+    top: -40px
+    left: 50%
+    width: 92px
+    height: 92px
+    background-color: $white
+    
+    border-radius: 50%
+    transform: translateX(-50%)
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: "" 
+      +bg($service-icon-1)
+      transform: translate(-50%, -50%)
+
+  &__title
+    font-family: $m
+    font-size: 30px
+    font-weight: 900
+    line-height: 1.6
+    color: $white
+    
+  &__body
+    padding-right: 45px
+    padding-bottom: 10px
+    padding-left: 45px
+    height: 100%
+
+    display: flex
+    flex-direction: column
+
+  &__list
+    padding-top: 20px
+    padding-bottom: 20px
+    font-size: 22px
+    font-weight: normal
+    color: $white
+
+  &__item
+    margin-bottom: 34px
+    &:last-child
+      margin-bottom: 0 
+
+  &__link
+    padding-bottom: 4px
+    display: inline-block
+    
+    color: inherit
+    text-decoration: none
+    +tr(all .3s ease-out)
+    &:hover
+      box-shadow: inset 0 -1px 0 #00ffff
+      color: #00ffff
+      +tr(all .3s ease-out)
+      
+  &__button
+    margin-top: auto
+    max-width: 251px
+    height: 49px
+
 

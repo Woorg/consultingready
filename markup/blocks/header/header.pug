@@ -1,9 +1,9 @@
 mixin header(data)
   header.header&attributes(attributes)
-    .header__container.container.container_full.flex.flex_start.flex_top
+    .header__container.container.flex.flex_start.flex_vertical.flex_wrap
       a.header__logo.logo(href="#") Logotype
 
-      nav.header__nav.nav.flex.flex_start.flex_vertical
+      nav.header__nav.nav.flex.flex_start.flex_top
         
         button.nav__button
           span.nav__button-text Меню
@@ -12,11 +12,10 @@ mixin header(data)
             span.nav__line
             span.nav__line
                         
-
         ul.nav__list.flex.flex_start.flex_wrap
-          li.nav__item
+          li.nav__item.nav__item_sub
             a.nav__link(href="#about-country") Открытие бизнеса
-            ul.nav__item_sub.subnav
+            ul.nav__sub.subnav
               li.subnav__item
                 a.subnav__link(href="#") Регистрация ООО
               li.subnav__item
@@ -34,7 +33,7 @@ mixin header(data)
       .header__contacts
         a.header__phone.phone(href="tel:+78000000000") 8 800 000 00-00
   
-        ul.header__social.social
+        ul.header__social.social.flex.flex_start.flex_top
           li.social__item.social__item_fb
             a.social__link(href="#") Facebook
           li.social__item.social__item_twitter

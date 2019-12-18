@@ -1,2 +1,67 @@
 mixin services(data)
-    .services
+  section.services
+    .services__container.container
+      h2.services__title.title.title_regular Услуги для <span>бизнеса</span>
+      .services__text Мы оказываем полный спектр консалтинговых услуг для бизнеса на всех стадиях развития. Сколько лет <br/>вы бы не были на рынке - мы выявим точки роста, поможем отладить процессы, и опередить конкурентов. Для нас нет неразрешимых проблем и непреодолимых обстоятельств, существуют только интересные задачи.
+      ul.services__list.flex.flex_start.flex_top.flex_wrap
+        li.services__item.service(style="background-image:url('assets/images/general/service-bg.png'); ")
+          .service__top
+            .service__icon
+            h2.service__title Создаёте новый бизнес?
+          
+          .service__body
+            ul.service__list
+              li.service__item
+                a.service__link(href="#") Бизнес-планирование
+              li.service__item
+                a.service__link(href="#") Регистрация ООО
+              li.service__item
+                a.service__link(href="#") Регистрация ИП
+              li.service__item
+                a.service__link(href="#") Юридические адреса
+              li.service__item
+                a.service__link(href="#") Консультации
+
+            a.service__button.button.button_regular(href="#") Оставить заявку
+
+        li.services__item.service(style="background-image:url('assets/images/general/service-bg.png'); ")
+          .service__top
+            .service__icon 
+            h2.service__title Уже есть своё дело?
+          
+          .service__body
+            ul.service__list
+              li.service__item
+                a.service__link(href="#") Реабилитация 115Ф3
+              li.service__item
+                a.service__link(href="#") Найти инвестора
+              li.service__item
+                a.service__link(href="#") Финансовая модель
+              li.service__item
+                a.service__link(href="#") Обслуживание счёта
+              li.service__item
+                a.service__link(href="#") Консультации
+
+            a.service__button.button.button_regular(href="#") Оставить заявку
+
+
+        li.services__item.service(style="background-image:url('assets/images/general/service-bg.png'); ")
+          .service__top
+            .service__icon
+            h2.service__title Оптимизируете процессы?
+          
+          .service__body
+            ul.service__list
+              li.service__item
+                a.service__link(href="#") Передать бух.учёт
+              li.service__item
+                a.service__link(href="#") Сменить банк
+              li.service__item
+                a.service__link(href="#") Привлечь эксперта
+              li.service__item
+                a.service__link(href="#") Эквайринг
+              li.service__item
+                a.service__link(href="#") Консультации
+
+            a.service__button.button.button_regular(href="#") Оставить заявку
+

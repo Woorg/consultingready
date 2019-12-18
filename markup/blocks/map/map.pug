@@ -1,2 +1,44 @@
 mixin map(data)
-    .map
+  section.map
+    .map__container.container
+      .map__contacts.contacts
+        .contacts__top
+          h2.contacts__title.title.title_biggest Напишите мы на связи
+
+        .contacts__body.flex.flex_start.flex_top.flex-wrap
+          form.contacts__form.form(action="" method="post")
+            .form__field
+              input.form__input(type="text", value="", placeholder="Ваше имя")
+            .form__field.form__field_phone
+              input.form__input(type="text", value="", placeholder="Ваш телефон")
+            .form__field
+              textarea.form__textarea(placeholder="Сообщение...")
+            input.form__submit.button(type="submit", value="Оставить заявку")
+
+          .contacts__col
+            ul.contacts__list
+              li.contacts__item.contacts__item_phone
+                a.contacts__link(href="tel=+79064825691")
+                  .contacts__icon
+                  .contacts__item-text +7(906) 482-56-91
+              li.contacts__item.contacts__item_email
+                a.contacts__link(href="mailto:argon.web@mail.ru")
+                  .contacts__icon
+                  .contacts__item-text argon.web@mail.ru
+              li.contacts__item.contacts__item_marker
+                .contacts__icon
+              .contacts__item-text г Москва ул. Пушкина 23
+      
+            .contacts__social.social
+              .social__title Читайте нас в соц.сетях
+              ul.social__list
+                li.social__item.social__item_fb
+                  a.social__link(href="#") Facebook
+                li.social__item.social__item_twitter
+                  a.social__link(href="#") Twitter
+                li.social__item.social__item_vk
+                  a.social__link(href="#") Vk
+                li.social__item.social__item_inst
+                  a.social__link(href="#") Instagram
+
+    #map.map__object

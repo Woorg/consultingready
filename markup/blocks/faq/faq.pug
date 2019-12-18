@@ -1,24 +1,43 @@
 mixin faq(data)
   section.faq
-    .faq__container.container(class="uk-container")
-      h2.faq__title.title.title_regular Частые <span>вопросы</span> от пациентов
+    .faq__container.container
+      h2.faq__title.title.title_regular Мы подготовили ответы <br/>на вопросы, которые нам задают
+      
+      .faq__row.flex.flex_start.flex_top.flex_wrap
 
-      ul.faq__list(uk-accordion)
-        li.faq__item
-          a.faq__item-title.uk-accordion-title(href='#') 1. Почему у конкурентов дешевле?
-          .faq__text.uk-accordion-content
-            p Это процедура, при которой в кость челюсти вживляют особое приспособление – имплант. Благодаря имплантации человек сегодня может восстановить совершенно любое количество утраченных зубов – один или все сразу.
-        li.faq__item 
-          a.faq__item-title.uk-accordion-title(href='#') 2. Когда можно есть?
-          .faq__text.uk-accordion-content
-            p Это процедура, при которой в кость челюсти вживляют особое приспособление – имплант. Благодаря имплантации человек сегодня может восстановить совершенно любое количество утраченных зубов – один или все сразу.
+        figure.faq__image
+          img.lazy(data-srcset="assets/images/content/faq-image.png 1x, assets/images/content/faq-image@2x.png 2x, assets/images/content/faq-image@3x.png 3x" alt="")
 
-        li.faq__item
-          a.faq__item-title.uk-accordion-title(href='#') 3. Сколько будет служить?
-          .faq__text.uk-accordion-content
-            p Это процедура, при которой в кость челюсти вживляют особое приспособление – имплант. Благодаря имплантации человек сегодня может восстановить совершенно любое количество утраченных зубов – один или все сразу.
+        .faq__content
 
-        li.faq__item
-          a.faq__item-title.uk-accordion-title(href='#') 4. А точно не будет больно?
-          .faq__text.uk-accordion-content
-            p Это процедура, при которой в кость челюсти вживляют особое приспособление – имплант. Благодаря имплантации человек сегодня может восстановить совершенно любое количество утраченных зубов – один или все сразу.
+          ul.faq__list
+            li.faq__item
+              .faq__item-title Необходимо ли мне заводить расчётный счёт?
+              .faq__text.text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            li.faq__item 
+              .faq__item-title Сколько времени понадобится на открытие?
+              .faq__text.text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            li.faq__item
+              .faq__item-title Какие документы от меня потребуются?
+              .faq__text.text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            li.faq__item
+              .faq__item-title Какова вероятность отказа?
+              .faq__text.text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            li.faq__item
+              .faq__item-title Предоставляете ли вы гарантии?
+              .faq__text.text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            li.faq__item
+              .faq__item-title Я в другой стране. Могу ли я прислать представителя?
+              .faq__text.text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          button.faq__button.button Задать свой вопрос

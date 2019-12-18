@@ -8,6 +8,16 @@ html(class="no-js", lang="ru")
 
   include ../blocks/hero/hero.pug
   include ../blocks/services/services.pug
+  include ../blocks/cta/cta.pug
+  include ../blocks/practice/practice.pug
+  include ../blocks/advantages/advantages.pug
+  include ../blocks/trust/trust.pug
+  include ../blocks/faq/faq.pug
+  include ../blocks/expert/expert.pug
+  include ../blocks/article/article.pug
+  include ../blocks/map/map.pug
+  include ../blocks/contacts/contacts.pug
+
 
   //- include ../blocks/about-country/about-country.pug
   //- include ../blocks/to-do/to-do.pug
@@ -60,54 +70,20 @@ html(class="no-js", lang="ru")
       main.page__inner
         +hero()
         +services()
-
-        //- // end hero
-        //- +about-country()
-        //- // end about
-        //- +to-do()
-        //- // end todo
-        //- +visa()
-        //- // end visa
-        //- +events()
-        //- // end events
-        //- +know()
-        //- // end know
-        //- +gallery()
-        //- // end gallery
-        //- +contact-us()
-
-        //- //end contact-us
-
-        //- +what()
-        //- +how()
-        //- +inspection()
-        //- +who()
-        //- +why()
-        //- +rating()
-        //- +reviews()
-        //- +certificate()
-        //- +price()
-        //- +faq()
-        //- +bottom()
-        //- +inherit()
-        //- +what()
-        //- +calc()
-        //- +accept()
-        //- +options()
-        //- +result()
-        //- +faq()
-        //- +licenses()
-        //- +clients()
-        //- +articles()
-        //- +articles-second()
-        //- +cta()
-        //- +addresses()
-        //- +questions()
+        +cta()
+        +practice()
+        +trust()
+        +faq()
+        +expert()
+        +article()
+        +map()
+        +contacts()
+  
       .page__footer
         +footer()
         //- end footer
-        //- +popup()#callback.mfp-hide
 
+    //- script(src='%=static=%js/separate-js/picturefill.min.js')
     script(src='%=static=%js/separate-js/lazyload.min.js' )
     script(src='%=static=%js/separate-js/jquery.min.js')
     //- script(src='%=static=%js/separate-js/uikit-core.min.js')
@@ -115,34 +91,35 @@ html(class="no-js", lang="ru")
 
     //- script(src='%=static=%js/separate-js/components/slider.min.js')
     //- script(src='%=static=%js/separate-js/components/countdown.min.js')
-
+    script(src='%=static=%js/separate-js/typograf.all.min.js')
     script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
     script(src='%=static=%js/separate-js/slick.min.js')
     script(src='%=static=%js/separate-js/jquery.mask.min.js')
     script(src='%=static=%js/main%=hash=%%=min=%.js')
 
-    //- script(src="//api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
-    //- script.
-    //-   ymaps.ready(init);
+    script(src="//api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
+
+    script.
+      ymaps.ready(init);
       
-    //-   function init() {
-    //-     var myMap = new ymaps.Map('map', {
-    //-       center: [23.011112, 45.901314], // Москва
-    //-       zoom: 5
-    //-     }, {
-    //-       searchControlProvider: ''
-    //-     });
+      function init() {
+        var myMap = new ymaps.Map('map', {
+          center: [55.780057, 37.663157], // Москва
+          zoom: 16
+        }, {
+          searchControlProvider: ''
+        });
 
-    //-     var myPlacemark = new ymaps.Placemark(
-    //-       [23.011112, 45.901314], {
-    //-           balloonContent: 'Саудовская аравия'
-    //-       }, {
-    //-           //- iconLayout: 'default#image',
-    //-       }      
-    //-     );
+        var myPlacemark = new ymaps.Placemark(
+          [55.779987, 37.666001], {
+              balloonContent: 'Красносельский район'
+          }, {
+              //- iconLayout: 'default#image',
+          }      
+        );
 
-    //-     myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark);
 
-    //-   }
+      }
 
 

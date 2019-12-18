@@ -48,7 +48,6 @@ import svg4everybody from 'svg4everybody';
 
     // Header
 
-
     // const $header = $('.header');
 
     // console.log($header.scrollTop());
@@ -89,7 +88,6 @@ import svg4everybody from 'svg4everybody';
     // });
 
 
-
     // Nav to section
 
     // $('.header__nav a').on( 'click', function(e) {
@@ -99,6 +97,16 @@ import svg4everybody from 'svg4everybody';
     //     $('html, body').animate({ scrollTop: $(_scroll).offset().top - 150  }, 300);
     //   }
     // });
+
+
+    // Typograf
+
+    const tp = new Typograf({locale: ['ru', 'en-US']});
+    const serviceText = document.querySelector('.services__text');
+    const heroText = document.querySelector('.hero__text');
+
+    serviceText.innerHTML = tp.execute(serviceText.innerHTML);
+    heroText.innerHTML = tp.execute(heroText.innerHTML);
 
 
 
@@ -113,17 +121,74 @@ import svg4everybody from 'svg4everybody';
         slidesToShow: 1,
         dots: false,
         arrows: true,
-        speed: 300,
+        speed: 600,
         // infinite: false,
         fade: true,
         waitForAnimate: false,
         adaptiveHeight: true,
-        appendArrows: '.hero__nav-buttons',
-        prevArrow: '.hero__arrow_prev',
-        nextArrow: '.hero__arrow_next',
+        // appendArrows: '.hero__nav-buttons',
+        // prevArrow: '.hero__arrow_prev',
+        // nextArrow: '.hero__arrow_next',
       });
 
     }
+
+    // Practice slider
+
+    const $practiceSlider = $('.practice__slider');
+
+    if ($practiceSlider.length) {
+
+      $practiceSlider.slick({
+        slidesToShow: 1,
+        dots: false,
+        arrows: true,
+        speed: 600,
+        // infinite: false,
+        fade: true,
+        waitForAnimate: false,
+        adaptiveHeight: true,
+        appendArrows: '.practice__slider-nav',
+        // prevArrow: '.hero__arrow_prev',
+        // nextArrow: '.hero__arrow_next',
+      });
+
+    }
+
+    // Trust carousel
+
+    const $trustCarousel = $('.trust__carousel');
+
+    if ($trustCarousel.length) {
+
+      $trustCarousel.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        speed: 600,
+        // infinite: false,
+        // fade: true,
+        lazyLoad: 'progressive',
+        touchMove: true,
+        focusOnSelect: true,
+        waitForAnimate: true,
+        adaptiveHeight: true,
+        appendArrows: '.trust__carousel-nav',
+        // prevArrow: '.hero__arrow_prev',
+        // nextArrow: '.hero__arrow_next',
+      });
+
+    }
+
+    // Faq
+
+    const $question = $('.faq__item');
+
+    $question.on('click', function () {
+      $(this).siblings().removeClass('faq__item_open');
+      $(this).toggleClass('faq__item_open');
+    });
 
     // Tabs
 

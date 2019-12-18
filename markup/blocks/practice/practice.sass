@@ -1,0 +1,120 @@
+.practice
+  position: relative
+  font-family: $f
+  color: $black 
+  
+  &:after
+    position: absolute
+    z-index: -1
+    top: 0
+    right: -300px
+    content: ""
+    width: 2036px
+    height: 1275px
+    background: url('../images/general/practice-bg.png') 0 0 no-repeat 
+    
+  &:before
+    position: absolute
+    bottom: 0
+    left: 50%
+    width: 1371px
+    height: 2px
+    content: "" 
+    opacity: 0.35
+    background-color: #e5e5e5
+    transform: translateX(-50%)
+
+  &__container
+    padding-top: 40px
+    padding-bottom: 40px
+    
+  &__top
+    margin-bottom: 23px
+    display: flex
+    
+  // &__title
+  
+  &__advantages
+    margin-top: 13px
+    margin-left: auto
+    max-width: 554px
+    width: 1100%
+
+  // &__slider
+
+  &__item
+    padding-bottom: 65px
+
+  &__image
+    margin-top: 50px
+  
+  &__entry
+    margin-left: auto
+    max-width: 552px
+    width: 100%
+
+  &__entry-w
+    margin-bottom: 18px
+    border-bottom: 5px solid #3eb24f
+    padding-top: 22px
+    padding-right: 9px
+    padding-bottom: 13px
+    padding-left: 10px
+    background-color: #ffffff
+    font-size: 24px
+    letter-spacing: 1.2px
+    box-shadow: 1px 1.7px 35.7px 2.3px rgba(0, 0, 0, 0.05)
+  &__entry-title
+    margin-bottom: 6px
+    font-weight: 700 
+    
+  &__entry-text
+    font-weight: 300
+    line-height: 1.2
+    
+  &__entry-list
+    font-weight: 300 
+    
+  &__entry-item
+    &:before
+      content: "- " 
+
+  &__slider-nav
+    padding-left: 100px
+    
+  .slick-arrow
+    position: relative
+    width: 41px
+    height: 41px
+    background-color: #ffffff
+    border-radius: 50%
+    box-shadow: 1px 1.7px 35.7px 2.3px rgba(0, 0, 0, 0.05)
+    transform: none
+    &:before
+      display: none
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ""
+      +bg($slider-arrow)
+      opacity: 1
+      transform: translate(-50%, -50%) 
+      +tr(opacity .3s ease-out)
+    &:hover
+      &:after
+        opacity: 0.9
+        +tr(opacity .3s ease-out)
+        
+  .slick-prev
+    margin-right: 16px
+    left: 0
+    &:after
+      transform: translate(-50%, -50%) rotate(180deg)
+      
+  .slick-next
+    right: 0
+
+
+
+

@@ -1,0 +1,102 @@
+.faq
+  &__container
+    padding-top: 85px
+    padding-bottom: 65px
+  
+  &__title
+    margin-bottom: 90px
+    line-height: 1.2
+    
+  &__content
+    margin-left: auto
+    max-width: 851px
+    width: 100%
+    
+  &__list
+    counter-reset: listCounter
+
+  &__item
+    position: relative
+    margin-bottom: 20px
+    padding-top: 15px
+    padding-right: 17px
+    padding-bottom: 20px
+    padding-left: 44px
+    background-color: #f3efef
+    border-radius: 5px
+    counter-increment: listCounter
+    cursor: pointer
+    +tr(all .3s linear)
+    
+    &:after
+      position: absolute
+      top: -14px
+      left: -7px
+      width: 25px
+      height: 25px
+      content: counter(listCounter)
+      background-color: #0197d2
+      color: #fafafb
+      font-family: $u
+      font-size: 18px
+      font-weight: bold
+      line-height: 25px
+      text-align: center
+      border-radius: 50%
+      box-shadow: 1px 1.7px 35.7px 2.3px rgba(0, 0, 0, 0.05)
+      
+    &:last-child
+      margin-bottom: 0
+
+  &__item_open
+    +tr(all .3s linear)
+    .faq__item-title
+      &:after
+        transform: translateY(-50%) rotate(180deg)
+    .faq__text
+      padding-top: 10px
+      display: block
+      height: auto
+      max-height: 99999px
+      
+      opacity: 1
+      +tr(all .2s linear)
+      
+  &__item-title
+    position: relative
+    font-family: $fD
+    font-size: 28px
+    font-weight: normal
+    line-height: 1
+    white-space: nowrap
+    text-overflow: ellipsis
+    color: #2d2d2d
+    overflow: hidden
+    
+    &:after
+      position: absolute
+      top: 50%
+      right: 0
+      
+      +bg($faq-arrow)
+      transform: translateY(-50%)
+
+  &__text
+    height: 0
+    max-height: 0
+    opacity: 0
+    +tr(all .2s linear)
+    
+  &__image
+    margin-top: 12px
+  
+  &__button
+    position: relative
+    z-index: 1
+    margin-top: 20px
+    padding-top: 25px
+    padding-right: 26px
+    padding-bottom: 27px
+    padding-left: 26px
+    height: 81px
+    font-size: 28px

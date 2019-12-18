@@ -1,0 +1,41 @@
+.cta
+  &__container
+    padding-top: 40px
+    padding-bottom: 96px
+    font-size: 30px
+    font-family: $u 
+    
+  &__w
+    position: relative
+    padding-top: 20px
+    padding-right: 320px
+    padding-bottom: 25px
+    padding-left: 190px
+    min-height: 115px
+    background-color: #f3efef
+    // background-size: cover
+    background-repeat: no-repeat 
+    background-position: 0 0 
+    border-radius: 3px
+    &:after
+      position: absolute
+      top: calc(50% - 1px)
+      left: 12px
+      content: ""
+      +bg($cta-icon)
+      transform: translateY(-50%) 
+      
+  &__title
+    margin-bottom: 4px
+    font-weight: 700 
+    span
+      color: #0197D3
+
+  &__text
+    +tracking(0) 
+      
+  &__button
+    position: absolute
+    top: calc(50% - 2px)
+    right: 46px
+    transform: translateY(-50%)
